@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<header>
+<link rel="stylesheet" href="/css/pokemon.css">
+
+
+</header>
+
+<body>
+    <nav>
+<h1>Pokemon manager</h1>
+<h3> <a href="/pokemon"> Home</a></h3>
+<h3> <a href="/pokemon/new"> Add new pokemon</a></h3>
+    </nav>
+
+ <div class="container">
+    <h3><%= pokemon.name %></h3>
+    <div class="info">
+<img src="<%= pokemon.img %>" alt="">
+    <div>
+        <h5>type:</h5>
+        <ul>
+            <% pokemon.type.forEach(element=>{%>
+            <li><%= element %></li>
+                <% });%>
+        </ul>
+    </div>
+    <div>
+        <h5>Stats:</h5>    
+        <ul>
+             
+
+             <li>hp:<%= pokemon.stats.hp%></li>
+             <li> attack:<%= pokemon.stats.attack%></li>
+             <li> defense:<%= pokemon.stats.defense%></li>
+             <li>spattack: <%= pokemon.stats.spattack%> </li>
+             <li> spdefense: <%= pokemon.stats.spdefense%> </li>
+             <li>speed: <%= pokemon.stats.speed%></li>
+                  
+        </ul>
+    </div>
+
+</div>
+
+
+ </div>
+
+
+</body>
+
+
+
+</html>

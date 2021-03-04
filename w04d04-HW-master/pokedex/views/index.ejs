@@ -1,0 +1,44 @@
+<html>
+<header>
+
+
+<link rel="stylesheet" href="css/index.css">
+</header>
+
+<body>
+    <nav>
+<h1>Pokemon manager</h1>
+<h3> <a href="/pokemon/new"> Add new pokemon</a></h2>
+    </nav>
+
+ <ul class="container">
+    <% pokemon.forEach( (element) => { %>
+    <li class="item">
+        <h3>
+            <a href="/pokemon/<%= element.id %>"><%= element.name %></a>
+        </h3>
+
+        <img src="<%= element.img %>" alt="">
+
+        <div class="grid">
+            <h4><a href="/pokemon/<%= element.id %>/edit">edit</a></h4>
+            <h4>        
+                <form action="/pokemon/<%= element.id %>?_method=DELETE" method="POST">
+
+                <input type="submit" value="DELETE" />
+              </form>
+            </h4>
+        </div>
+        <% })%>
+    </li>
+
+
+
+</ul>
+
+
+</body>
+
+
+
+</html>

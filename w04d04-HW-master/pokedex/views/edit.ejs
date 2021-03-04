@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<header>
+<link rel="stylesheet" href="/css/pokemon.css">
+
+
+</header>
+
+<body>
+    <nav>
+<h1>Pokemon manager</h1>
+<h3> <a href="/pokemon"> Home</a></h3>
+<h3> <a href="/pokemon/new"> Add new pokemon</a></h3>
+    </nav>
+
+ <div class="container">
+
+    <form action="/pokemon/<%= poke.id %>?_method=put" method="POST">
+       <ul>
+           <li>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%= poke.name %>" /></li>
+        <li> 
+            <li>
+                <label for="img">img</label>
+                <input type="text" name="img" id="img" value="<%= poke.img %>" /></li>
+                <li>
+            <h3>type:</h3>
+        <input type="text" name="type1" id="type1" value="<%=poke.type[0]  %>" />
+        <input type="text" name="type2" id="type2" value="<%= poke.type[1] %>" /></li>
+
+        <h3 >stats:</h3>
+        <li>   <label >HP:</label>
+        <input type="number" name="hp" id="hp" value="<%= poke.stats.hp %>" /></li>
+
+        <li>   <label >attack:</label>
+        <input type="number" name="attack" id="attack" value="<%= poke.stats.attack %>" /></li>
+
+        <li>   <label >defense:</label>
+        <input type="number" name="defense" id="defense" value="<%= poke.stats.defense %>" /></li>
+
+        <li>  <label >spattack:</label>
+        <input type="number" name="spattack" id="spattack" value="<%= poke.stats.spattack %>" /></li>
+
+        <li>   <label >spdefense:</label>
+        <input type="number" name="spdefense" id="spdefense" value="<%= poke.stats.spdefense %>" /></li>
+
+        <li>   <label >speed:</label>
+        <input type="number" name="speed" id="speed" value="<%= poke.stats.speed %>" /></li>
+
+        <input type="submit" name="" id="">
+    </ul>
+    </form>
+
+
+ </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="/js/edit.js"></script>
+
+</html>
